@@ -1,6 +1,10 @@
 {
   "name": "dirapi",
   "version": "0.1.0",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/iDev0urer/dir-to-json.git"
+  },
   "description": "Transform a directory, and all subtitles, into an api",
   "main": "app.js",
   "scripts": {
