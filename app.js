@@ -24,11 +24,13 @@ class DirToJson {
             var chunk = {
                 mime: mime.lookup(directory + file),
                 path: path.resolve(directory) + "/" + file,
-                name: file
+                name: file,
+                type: 'file'
             };
             if (this.isDirectory(chunk.path)) {
                 let dirJson = this.run(chunk.path);
                 chunk.subtree = dirJson;
+                chunk.type = 'directory';
             }
             json.push(chunk);
         }
